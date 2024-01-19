@@ -1,0 +1,28 @@
+deployments:
+  - name: app
+    replicas: 1
+    svcType: ClusterIP
+    ingress:
+      type: istio
+      svcPort: 80
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+      tls:
+        enabled: true
+    containers:
+      - name: app
+        image:
+          registry: "registry-dev.samoletgroup.ru"
+          repository: "cspb-fiit-saas/ithub-v2/exposeapp"
+        ports:
+          - name: http
+            containerPort: 8080
+            protocol: TCP
+            external: true
+            externalPort: 80
+        env: 
+          STAND: dev
+        resources:
+          cpu: 50m
+          memory: 100Mi

@@ -1,0 +1,10 @@
+include:
+  - project: 'platform/re-team/fly-pipeline'
+    ref: 'main'
+    file: '.main.ci.yaml'
+    
+variables:
+  REGISTRY_IMAGE: "registry-dev.samoletgroup.ru/cspb-fiit-saas/ithub-v2/exposeapp"
+  KUBE_NAMESPACE: "ithub"
+  USE_HARBOR: "true"
+  REGISTRY_PATH: "cspb-fiit-saas/ithub-v2/exposeapp"

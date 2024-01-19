@@ -1,0 +1,12 @@
+{
+  "javascript.validate.enable": false,
+  "css.validate": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "files.associations": {
+    ".stylelintrc": "json"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
